@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lucky Sevens</title>
+    <script type="text/JavaScript" src="luckySevens.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="container">
+
+    <h1>Lucky Sevens</h1>
+
+    <p>In Lucky Sevens, the player wins $4 if two dice add to seven and loses $1 if they don't. Enter your starting bet to see how the game would go if you keep playing as long as there is money left.</p>
+    <form name="numberFun"
+      onsubmit="return validateItems();"
+      onreset="resetForm();" class="form-inline">
+        <div class="form-group">
+            <label for="bet">Starting Bet (in whole dollars):</label>
+            <input type="number" class="form-control" id="bet" placeholder="$$$">
+        </div><br /><br />
+        <button type="submit" id="submitButton" class="btn btn-default" style="margin: auto;">Play</button>
+        <!--<button type="reset" id="resetButton" class="btn">Reset</button>-->
+    </form>
+
+    <table id="results" class="table table-striped" style="display:none;">
+        <thead>
+             <tr>
+               <th><hr /><h1>Results:</h1></th>
+                <!--
+                 <th>Operation</th>
+                 <th>Result</th>
+               -->
+             </tr>
+         </thead>
+         <tbody>
+             <tr>
+                 <td>Starting Bet:  </td>
+                 <td><span id="startingBet"></span></td>
+             </tr>
+             <tr>
+                 <td>Number of rolls before going broke:</td>
+                 <td><span id="totalRolls"></span></td>
+             </tr>
+             <tr>
+                 <td>Most money player has at any point:</td>
+                 <td><span id="maxGameMoney"></span></td>
+             </tr>
+             <tr>
+                 <td>The roll at which the player has the most money:</td>
+                 <td><span id="rollAtMaxGameMoney"></span></td>
+             </tr>
+         </tbody>
+       </table>
+</div>
+</body>
+</html>
